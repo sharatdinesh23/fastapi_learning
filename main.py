@@ -13,9 +13,23 @@ projects = [
     {
         "id":2,
         "name": "Rewamping the Portfolio"
+    },
+    {
+        "id":3,
+        "name": "this is my project"
     }
 ]
 
+users = [
+    {
+        "id":1,
+        "name":"Sharath"
+    },
+    {
+        "id":2,
+        "name":"Darshan"
+    }
+]
 
 @app.get("/")
 def health_check():
@@ -27,5 +41,8 @@ def health_check():
 def get_projects():
     return projects
 
+@app.get("/users",description="This url is for accessing the user",tags=["user"])
+def get_user():
+    return users
 
 
