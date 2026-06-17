@@ -22,5 +22,43 @@
 - Microservices
 - Production Deployment
 
+### Final Architecture We Are Working Toward
+                    Users
+                      │
+                      ▼
+
+                Load Balancer
+                      │
+                      ▼
+
+              FastAPI Application
+                      │
+      ┌───────────────┼───────────────┐
+      ▼               ▼               ▼
+
+ PostgreSQL         Redis         RabbitMQ
+(Database)        (Cache)        (Queues)
+
+                                      │
+                                      ▼
+
+                                Celery Workers
+
+                                      │
+                                      ▼
+
+                             Email Service
+
+                                      │
+                                      ▼
+
+                                   Kafka
+
+                                      │
+                                      ▼
+
+                            Analytics Service
+
+
 
 
