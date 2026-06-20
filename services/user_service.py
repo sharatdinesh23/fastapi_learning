@@ -1,4 +1,3 @@
-from datetime import datetime 
 from domain.user import User
 
 class UserService:
