@@ -9,6 +9,7 @@ class ProjectService:
                 name="Website Redesign",
                 description= "changing the website",
                 owner_id = 1,
+                tasks = [],
                 created_at = datetime.utcnow()
             ),
             Project(
@@ -16,6 +17,7 @@ class ProjectService:
                 name = "Mobile Application",
                 description = "Build custom mobile app",
                 owner_id = 1,
+                tasks = [],
                 created_at = datetime.utcnow()
             )
         ]

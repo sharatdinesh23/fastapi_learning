@@ -7,4 +7,5 @@ class Task:
     title:str
     description:str
     project_id:int
+    assigned_user_id :int
     created_at:datetime

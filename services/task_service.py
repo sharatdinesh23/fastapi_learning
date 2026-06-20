@@ -9,6 +9,7 @@ class TaskService:
                 title = "Task1",
                 description= "This task to be done",
                 project_id=1,
+                assigned_user_id = 1,
                 created_at = datetime.utcnow()
             ),
             Task(
@@ -16,6 +17,7 @@ class TaskService:
                 title = "Task2",
                 description= "This task to be done after task1",
                 project_id=1,
+                assigned_user_id = 1,
                 created_at = datetime.utcnow()
             )
         ]   
