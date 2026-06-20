@@ -6,7 +6,7 @@ def log_execution(func):
         result = func(*args,**kwargs)
         execution_time = time.time() - start_time
         
-        print(f"{func.__name__} took {execution_time:.4f} seconds")
+        print(f"{func.__name__} took {execution_time:.10f} seconds")
         return result
     return wrapper
  
