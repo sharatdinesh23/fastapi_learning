@@ -1,23 +1,14 @@
 from fastapi import FastAPI
-from services.project_service import ProjectService
-from services.task_service import TaskService
+from api.v1.routes.user_route import user_router
+from api.v1.routes.project_routes import project_router
+from api.v1.routes.task_routes import task_router
+
 
 app = FastAPI(
     title = "SaaS Project Management Platform",
     version  = "1.0.0"
 )
 
-project_service = ProjectService()
-task_service = TaskService()
-
-@app.get("/projects")
-def get_projects():
-    projects = project_service.get_projects()
-    
-    return projects
-
-@app.get("/tasks")
-def get_tasks():
-    tasks = task_service.get_tasks()
-    
-    return tasks
+app.include_router(user_router)
+app.include_router(project_router)
+app.include_router(task_router)

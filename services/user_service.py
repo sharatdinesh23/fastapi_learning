@@ -1,7 +1,8 @@
 from domain.user import User
+from core.decorators import log_execution
 
 class UserService:
-    
+    @log_execution
     def get_users(self)->list[User]:
         
         return [

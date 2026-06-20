@@ -1,7 +1,9 @@
 from datetime import datetime
 from domain.task import Task
+from core.decorators import log_execution
 
 class TaskService:
+    @log_execution
     def get_tasks(self) ->list[Task]:
         return [
             Task(

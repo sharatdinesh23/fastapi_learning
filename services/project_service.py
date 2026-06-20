@@ -1,7 +1,9 @@
 from datetime import datetime
 from domain.project import Project
+from core.decorators import log_execution
 
 class ProjectService:
+    @log_execution
     def get_projects(self) -> list[Project]:
         return [
             Project(
