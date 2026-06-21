@@ -1,10 +1,12 @@
 from datetime import datetime
 from domain.project import Project
 from core.decorators import log_execution
+import asyncio
 
 class ProjectService:
     @log_execution
-    def get_projects(self) -> list[Project]:
+    async def get_projects(self) -> list[Project]:
+        await asyncio.sleep(2)
         return [
             Project(
                 id=1,

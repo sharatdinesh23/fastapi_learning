@@ -1,10 +1,12 @@
 from datetime import datetime
 from domain.task import Task
 from core.decorators import log_execution
+import asyncio
 
 class TaskService:
     @log_execution
-    def get_tasks(self) ->list[Task]:
+    async def get_tasks(self) ->list[Task]:
+        await asyncio.sleep(5)
         return [
             Task(
                 id = 1,

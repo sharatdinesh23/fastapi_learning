@@ -1,10 +1,11 @@
 from domain.user import User
 from core.decorators import log_execution
+import asyncio
 
 class UserService:
     @log_execution
-    def get_users(self)->list[User]:
-        
+    async def get_users(self)->list[User]:
+        await asyncio.sleep(5)
         return [
             User(
                 id = 1,
